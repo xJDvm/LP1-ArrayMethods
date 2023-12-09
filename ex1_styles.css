@@ -40,7 +40,7 @@ body {
     line-height: 1.6;
   }
 
-/* Estilos para el formulario */
+
 form {
     max-width: 450px;
     margin: 20px auto;
@@ -48,14 +48,14 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    text-align: center; /* Centra el contenido del formulario */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra suave */
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   label {
     display: block;
     margin-bottom: 10px;
-    text-align: left; /* Alinea los labels a la izquierda */
+    text-align: left; 
   }
   
   input[type="text"] {
@@ -80,13 +80,13 @@ form {
     background-color: rgb(69, 134, 160);
   }
   
-  /* Estilos para la tabla */
+
   table {
     border-collapse: collapse;
     width: 100%;
     margin: 20px auto;
-    text-align: center; /* Centra el contenido de la tabla */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra suave */
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   th, td {
