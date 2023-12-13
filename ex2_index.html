@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 2</title>
+  <link rel="stylesheet" href="styles/ex1_styles.css">
+  <link rel="stylesheet" href="styles/sharedheader.css">
+  <script src="scripts/ex2_Scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="ex1_index.html">Ejercicio en Clase</a></li>
+        <li><a href="ex2_index.html" class="active">Asignacion 1</a></li>
+        <li><a href="ex3_index.html">Asignacion 2</a></li>
+        <li><a href="ex4_index.html">Asignacion 3</a></li>
+        <li><a href="ex5_index.html">Asignacion 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Ejercicio #1</h1>
+    <label for="numeros">Ingrese números separados por comas:</label>
+    <input type="text" id="numeros" required><br><br>
+    
+    <label for="numeroSustituir">Ingrese el número de sustitución:</label>
+    <input type="text" id="numeroSustituir" required><br><br>
+    
+    <button onclick="verificarNumeros()">Verificar y Sustituir</button>
+    <button id="limpiarBtn">Limpiar</button>
+    <br>
+    <br>
+    <div id="resultado">Resultado:</div>
+  </div>
+
+</body>
+</html>
