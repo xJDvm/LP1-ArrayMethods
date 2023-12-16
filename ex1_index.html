@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario y Tabla</title>
+  <link rel="stylesheet" href="styles/ex1_styles.css">
+  <link rel="stylesheet" href="styles/sharedheader.css">
+  <script src="scripts/ex1_Scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="ex1_index.html" class="active">Ejercicio en Clase</a></li>
+        <li><a href="ex2_index.html">Asignacion 1</a></li>
+        <li><a href="ex3_index.html">Asignacion 2</a></li>
+        <li><a href="ex4_index.html">Asignacion 3</a></li>
+        <li><a href="ex5_index.html">Asignacion 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form id="miFormulario">
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" required><br><br>
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br><br>
+    
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" required><br><br>
+    
+    <button type="button" onclick="agregar()">Agregar</button>
+  </form>
+
+  <table id="miTabla">
+    <thead>
+      <tr>
+        <th onclick="ordenar('apellido')">Apellido</th>
+        <th onclick="ordenar('nombre')">Nombre</th>
+        <th onclick="ordenar('edad')">Edad</th>
+        <th>Acción</th> 
+      </tr>
+    </thead>
+    <tbody id="cuerpoTabla">
+      
+    </tbody>
+  </table>
+
+</body>
+</html>

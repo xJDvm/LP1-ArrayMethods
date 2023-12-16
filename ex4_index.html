@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 2</title>
+  <link rel="stylesheet" href="styles/ex1_styles.css">
+  <link rel="stylesheet" href="styles/sharedheader.css">
+  <script src="scripts/ex4_Scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="ex1_index.html">Ejercicio en Clase</a></li>
+        <li><a href="ex2_index.html">Asignacion 1</a></li>
+        <li><a href="ex3_index.html">Asignacion 2</a></li>
+        <li><a href="ex4_index.html" class="active" >Asignacion 3</a></li>
+        <li><a href="ex5_index.html">Asignacion 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Ejercicio #3</h1>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br><br>
+    
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" required><br><br>
+    
+    <button onclick="pushArray1()">Array 1 - Push</button>
+    <button onclick="pushArray2()">Array 2 - Push</button>
+    <button onclick="limpiarCampos()" id="limpiarBtn">Limpiar</button>
+
+    <p>Array 2:</p>
+    <div id="resultado"></div>
+
+    <script src="scripts/ex2_Scripts.js"></script>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+1 - Introducir en un campo de texto varios números separados por comas. 
+    -Si todos los números son mayores a 5 entonces sustituir todos los valores del array con un número que debe ser ingresado en otro campo de texto
+
+2 - Introducir en un campo de texto varios números separados por coma.
+        -Si todos son pares devuelve : todos son pares
+        -Si no todos son pares: extraer el último par
+        -Si ninguno es par: ninguno es par
+
+3 - Ingresar nombre y apellido y hacer un array  
+        -Un botón para array 1 para hacer push
+        -Un botón para array 2 para hacer push 
+        -En array 1 verificar si todos los apellidos  > 6 , añadir todos al array 2, hacer un sort y mostrar en la interfaz
+
+4 - Ingresar varias palabras en un campo de texto a un array
+        -Todas las palabras que incluyan la letra J (campo texto)
+        -Mostrar la primera ingresada que incluya j
+        -Y la última ingresada
+
+Asignacion en clase:
+    Formulario con 3 campos de texto que se muestren en una tabla y que al seleccionar uno haya un botón para ordenar  dependiendo por columna y con programación orientada a objetos y funciones de alto orden
