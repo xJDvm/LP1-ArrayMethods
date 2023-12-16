@@ -5,6 +5,8 @@
   <title>Asignacion 4</title>
   <link rel="stylesheet" href="styles/stylePrincipal.css">
   <link rel="stylesheet" href="styles/sharedheader.css">
+  <link rel="stylesheet" href="styles/popupStyles.css">
+  <script src="scripts/popupScript.js"></script>
   <script src="scripts/ex5_Scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
@@ -23,6 +25,29 @@
 
   <div class="container">
     <h1>Ejercicio #4</h1>
+
+    <!-- Popup explicativo -->
+    <div class="ppbtn">
+      <button id="openPopupBtn">Ver Descripción</button>
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <div class="popup-text">
+            <h3>Asignacion #4 - Evaluacion</h3>
+            <p>Ingresar varias palabras en un campo de texto a un array</p>
+            <ul class="feat">
+              <li>-Se muestra todas las palabras que incluyan J</li>
+              <li>-Se muestra primera palabra ingresada con la letra J</li>
+              <li>-Se muestra ultima palabra ingresada con la letra J</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup explicativo -->
+
+    <br>
+    <br>
     <label for="palabras">Ingrese varias palabras separadas por espacios:</label>
     <input type="text" id="palabras" required><br><br>
     
@@ -34,6 +59,9 @@
 
     <p>Última palabra con 'j' encontrada:</p>
     <div id="ultimaJ"></div>
+
+    <p>Todas las palabras con 'j':</p>
+    <div id="todasJ"></div>
 
   </div>
 

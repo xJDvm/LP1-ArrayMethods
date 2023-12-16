@@ -5,6 +5,8 @@
   <title>Asignacion</title>
   <link rel="stylesheet" href="styles/stylePrincipal.css">
   <link rel="stylesheet" href="styles/sharedheader.css">
+  <link rel="stylesheet" href="styles/popupStyles.css">
+  <script src="scripts/popupScript.js"></script>
   <script src="scripts/ex4_Scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
@@ -23,6 +25,31 @@
 
   <div class="container">
     <h1>Ejercicio #3</h1>
+
+    <!-- Popup explicativo -->
+    <div class="ppbtn">
+      <button id="openPopupBtn">Ver Descripción</button>
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <div class="popup-text">
+            <h3>Asignacion #3 - Evaluacion</h3>
+            <p>Ingresar nombre y apellido y almacenarlo un array especifico</p>
+            <ul class="feat">
+              <li>-Boton para almacenar en array 1</li>
+              <li>-Boton para almacenar en array 2</li>
+              <li>-Verificar si TODOS los apellidos de 'array 1' tienen longitud > 6 y moverlos al array 2</li>
+              <li>-Si no todos cumplen esta condicion mantener igual.</li>
+              <li>-Ordenar el array 2 alfabeticamente y mostrar.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup explicativo -->
+    
+    <br>
+    <br>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" required><br><br>
     
@@ -33,6 +60,12 @@
     <button onclick="array2Push()">Array 2 - Push</button>
     <button onclick="verificarArrays()">Verificar</button>
     <button onclick="limpiarTodo()">Limpiar</button>
+    
+    <br>
+    <br>
+
+
+    
     
     <p>Array 2:</p>
     <div id="resultado"></div>
