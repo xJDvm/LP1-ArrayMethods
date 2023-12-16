@@ -2,39 +2,37 @@ class Personas {
     constructor() {
       this.array1 = [];
       this.array2 = [];
+      this.verificacionAnterior = '';
     }
   
     array1Push(nombre, apellido) {
-      this.array1.push({ nombre, apellido });
-    }
+      const existeEnArray1 = this.array1.some(persona => persona.nombre === nombre && persona.apellido === apellido);
+      const existeEnArray2 = this.array2.some(persona => persona.nombre === nombre && persona.apellido === apellido);
   
-    array2Push(personas) {
-      this.array2.push(...personas);
-      this.mostrarEnInterfaz();
+      existeEnArray1 || existeEnArray2 || this.array1.push({ nombre, apellido });
     }
   
     verificarArrays() {
       const apellidosMasSeis = this.array1.every(persona => persona.apellido.length > 6);
   
-      if (apellidosMasSeis) {
-        const apellidosLargos = this.array1.filter(persona => persona.apellido.length > 6);
-        this.array2Push(apellidosLargos);
-        this.array2.sort((a, b) => a.apellido.localeCompare(b.apellido));
-        this.array1 = []; // Limpiar array1 si se transfieren elementos al array2
-      } else {
-        this.mostrarEnInterfaz(this.array2);
-      }
+      const apellidosLargos = this.array1.filter(persona => persona.apellido.length > 6);
+      this.array2.push(...apellidosLargos);
+  
+      this.array2.sort((a, b) => a.apellido.localeCompare(b.apellido));
+      this.mostrarEnInterfaz();
     }
   
     limpiarTodo() {
       this.array1 = [];
       this.array2 = [];
-      this.mostrarEnInterfaz();
+      this.verificacionAnterior = '';
+      this.mostrarEnInterfaz();      document.getElementById('apellido').value = '';
+      document.getElementById('nombre').value = '';
     }
   
-    mostrarEnInterfaz(personas = this.array2) {
+    mostrarEnInterfaz() {
       const resultadoDiv = document.getElementById('resultado');
-      resultadoDiv.innerHTML = personas.map(persona => `<p>${persona.nombre} ${persona.apellido}</p>`).join('');
+      resultadoDiv.innerHTML = this.array2.map(persona => `<p>${persona.nombre} ${persona.apellido}</p>`).join('');
     }
   }
   
@@ -44,10 +42,6 @@ class Personas {
     const nombre = document.getElementById('nombre').value.trim();
     const apellido = document.getElementById('apellido').value.trim();
     personas.array1Push(nombre, apellido);
-  };
-  
-  const array2Push = () => {
-    personas.array2Push(personas.array2);
   };
   
   const verificarArrays = () => {
