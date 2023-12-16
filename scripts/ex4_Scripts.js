@@ -1,38 +1,54 @@
-class Persona {
-    constructor(nombre, apellido) {
-      this.nombre = nombre;
-      this.apellido = apellido;
+class Personas {
+    constructor() {
+      this.array1 = [];
+      this.array2 = [];
+      this.verificacionAnterior = '';
+    }
+  
+    array1Push(nombre, apellido) {
+      const existeEnArray1 = this.array1.some(persona => persona.nombre === nombre && persona.apellido === apellido);
+      const existeEnArray2 = this.array2.some(persona => persona.nombre === nombre && persona.apellido === apellido);
+  
+      existeEnArray1 || existeEnArray2 || this.array1.push({ nombre, apellido });
+    }
+  
+    verificarArrays() {
+      const apellidosMasSeis = this.array1.every(persona => persona.apellido.length > 6);
+  
+      const apellidosLargos = this.array1.filter(persona => persona.apellido.length > 6);
+      this.array2.push(...apellidosLargos);
+  
+      this.array2.sort((a, b) => a.apellido.localeCompare(b.apellido));
+      this.mostrarEnInterfaz();
+    }
+  
+    limpiarTodo() {
+      this.array1 = [];
+      this.array2 = [];
+      this.verificacionAnterior = '';
+      this.mostrarEnInterfaz();      document.getElementById('apellido').value = '';
+      document.getElementById('nombre').value = '';
+    }
+  
+    mostrarEnInterfaz() {
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = this.array2.map(persona => `<p>${persona.nombre} ${persona.apellido}</p>`).join('');
     }
   }
   
-  const array1 = [];
-  const array2 = [];
+  const personas = new Personas();
   
-  const pushArray1 = () => {
+  const array1Push = () => {
     const nombre = document.getElementById('nombre').value.trim();
     const apellido = document.getElementById('apellido').value.trim();
-  
-    array1.push(new Persona(nombre, apellido));
-    document.getElementById('nombre').value = '';
-    document.getElementById('apellido').value = '';
+    personas.array1Push(nombre, apellido);
   };
   
-  const pushArray2 = () => {
-    array1.forEach(persona => {
-      if (persona.apellido.length > 6) {
-        array2.push(persona);
-      }
-    });
-  
-    array2.sort((a, b) => a.apellido.localeCompare(b.apellido));
-    mostrarArray2();
+  const verificarArrays = () => {
+    personas.verificarArrays();
   };
   
-  const mostrarArray2 = () => {
-    const resultadoDiv = document.getElementById('resultado');
-    resultadoDiv.textContent = array2.map(persona => `${persona.nombre} ${persona.apellido}`).join(', ');
+  const limpiarTodo = () => {
+    personas.limpiarTodo();
   };
-
-  const limpiarCampos = () => {
-    document.getElementById('resultado').textContent = '';
-  };  
+  
