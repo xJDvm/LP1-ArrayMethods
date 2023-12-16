@@ -26,4 +26,9 @@ class Numeros {
     const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.textContent = `Resultado: [${numeros.obtenerResultado()}]`;
   };
-  
+
+  const limpiarCampos = () => {
+    document.getElementById('numeros').value = '';
+    document.getElementById('numeroSustituir').value = '';
+    document.getElementById('resultado').textContent = 'Resultado: ';
+  };
