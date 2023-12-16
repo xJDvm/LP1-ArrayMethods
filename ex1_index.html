@@ -5,6 +5,8 @@
   <title>Formulario y Tabla</title>
   <link rel="stylesheet" href="styles/stylePrincipal.css">
   <link rel="stylesheet" href="styles/sharedheader.css">
+  <link rel="stylesheet" href="styles/popupStyles.css">
+  <script src="scripts/popupScript.js"></script>
   <script src="scripts/ex1_Scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
@@ -32,6 +34,28 @@
     <input type="text" id="edad" required><br><br>
     
     <button type="button" onclick="agregar()">Agregar</button>
+
+    <!-- Popup explicativo -->
+    <button id="openPopupBtn">Ver Descripción</button>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <div class="popup-text">
+          <h3>Ejercicio realizado en clase 9/12/23</h3>
+          <p>Formulario con 3 campos de texto que muestran una tabla</p>
+          <ul class="feat">
+            <li>-Boton para eliminar objetos de la tabla</li>
+            <li>-Ordenar por columnas</li>
+            <li>-Funciones de alto orden</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Popup explicativo -->
+
+
+
+
   </form>
 
   <table id="miTabla">

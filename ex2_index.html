@@ -5,7 +5,9 @@
   <title>Página 2</title>
   <link rel="stylesheet" href="styles/stylePrincipal.css">
   <link rel="stylesheet" href="styles/sharedheader.css">
+  <link rel="stylesheet" href="styles/popupStyles.css">
   <script src="scripts/ex2_Scripts.js"></script>
+  <script src="scripts/popupScript.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,6 +25,29 @@
 
   <div class="container">
     <h1>Ejercicio #1</h1>
+
+    <!-- Popup explicativo -->
+    <div  class="ppbtn">
+      <button id="openPopupBtn">Ver Descripción</button>
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close" id="closeBtn">&times;</span>
+          <div class="popup-text">
+            <h3>Asignacion #1 - Evaluacion</h3>
+            <p>Introducir en un campo de texto varios números separados por coma.</p>
+            <ul class="feat">
+              <li>-Si todos los numeros son mayores a 5 Sustituir con el otro numero</li>
+              <li>-Si no todos son mayores a 5 mantener el array igual</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup explicativo -->
+
+    <br>
+    <br>
+
     <label for="numeros">Ingrese números separados por comas:</label>
     <input type="text" id="numeros" required><br><br>
     
@@ -31,8 +56,6 @@
     
     <button onclick="verificarNumeros()">Verificar y Sustituir</button>
     <button onclick="limpiarCampos()" id="limpiarBtn">Limpiar</button>
-    <br>
-    <br>
     <div id="resultado">Resultado:</div>
   </div>
 
