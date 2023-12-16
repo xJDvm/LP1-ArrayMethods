@@ -5,9 +5,10 @@ class GestionArray {
   }
 
   pushToArray(arrayName, nombre, apellido) {
-      this[arrayName].push({ nombre, apellido });
-      console.log(`Array 1:`, this.array1);
-      console.log(`Array 2:`, this.array2);
+    const camposVacios = [nombre, apellido].some(value => !value.trim());
+    camposVacios ? alert('Por favor, completa ambos campos de texto.') : this[arrayName].push({ nombre, apellido });
+    console.log(`Array 1:`, this.array1);
+    console.log(`Array 2:`, this.array2);
   }
 
   limpiarArrays() {
